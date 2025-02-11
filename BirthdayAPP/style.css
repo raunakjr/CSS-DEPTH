@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+}
+.salsa-regular {
+  font-family: "Salsa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero {
+  min-height: 100vh;
+
+  background-color: #f99501;
+  background-image: url("./images/Cream\ Brown\ Simple\ Happy\ Birthday\ Zoom\ Virtual\ Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero p {
+  font-size: 32px;
+  font-family: sans-serif;
+  max-width: 500px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #fbd8a4;
+}
+
+.music {
+  display: flex;
+  background-color: #fbd8a4;
+  border-radius: 45px;
+  align-items: center;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 8px;
+  max-width: max-content;
+}
+.mid {
+  padding-top: 10px;
+  background-color: #fbd8a4;
+}
+.mid img {
+  max-width: 500px;
+  border-radius: 20px;
+  display: block;
+  margin-inline: auto;
+}
+.mid h2 {
+  font-size: 35px;
+  font-family: cursive;
+  text-align: center;
+}
+.media-container {
+  display: flex;
+  justify-content: center;
+  background-color: lightcoral;
+
+  /* Space between image and video */
+}
+
+@media (max-width: 700px) {
+  .music {
+    max-width: 250px;
+  }
+  .music-icon,
+  .music-content {
+    display: none;
+  }
+  .hero p {
+    font-size: 25px;
+  }
+  .mid img {
+    max-width: 300px;
+  }
+  .mid h2 {
+    font-size: 25px;
+  }
+
+  .media video {
+    max-width: 50%; /* Full width on smaller screens */
+  }
+}
+
+.quote {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #ff6f61;
+  margin: 20px 0;
+}
+
+.quote span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.styled-video {
+  width: 50%;
+  max-width: 400px;
+
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.styled-video:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #fbd8a4;
+}
+
+footer p {
+  text-align: end;
+  font-family: cursive;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
