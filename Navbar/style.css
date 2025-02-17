@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  background-color: rgb(234, 232, 232);
+  min-height: 100vh;
+  font-family: Nunito;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 0 2rem;
+  background-color: #bbaeae; /* Dark background to make shadow visible */
+  box-shadow: 0px 0px 15px 5px white; /* White box shadow */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  gap: 2rem;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  gap: 2rem;
+}
+.middle ul {
+  position: absolute;
+  padding: 1rem;
+  background-color: aliceblue;
+  border-radius: 5px;
+  right: 26%;
+  top: 14%;
+  opacity: 0;
+  pointer-events: none;
+}
+.middle li + li {
+  margin-top: 8px;
+}
+.middle span {
+  cursor: pointer;
+}
+.middle div:hover ul,
+.middle div:hover span {
+  opacity: 1;
+  top: 80%;
+  pointer-events: auto;
+}
+a,
+span {
+  /* background-color: blue; */
+  font-family: Nunito;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21.82px;
+  letter-spacing: 3%;
+  padding-block: 20px;
+}
+
+li {
+  list-style: none;
+
+  text-decoration-line: 1;
+}
+ul li a,
+a {
+  text-decoration: none; /* Removes underline */
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+}
+
+.expand {
+  position: relative;
+  /* background-color: aqua; */
+  display: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.expand input {
+  opacity: 0;
+}
+
+@media (max-width: 750px) {
+  .card {
+    justify-content: space-around;
+  }
+
+  .right {
+    display: none;
+  }
+  .middle {
+    /* background-color: aquamarine; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    position: absolute;
+    top: 120%;
+    right: -35%;
+    opacity: 0;
+  }
+  .middle ul {
+    opacity: 0;
+    text-align: start;
+    /* top: 100%; */
+  }
+  .middle div:hover ul,
+  .middle div:hover span {
+    right: 55%;
+    top: 20%;
+    pointer-events: auto;
+  }
+  .middle a,
+  span {
+    max-width: 100px;
+  }
+  .expand {
+    display: block;
+  }
+  .list .right {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+  }
+
+  .card:has(input:checked) .middle {
+    opacity: 1;
+    top: 90%;
+    transition: all ease-in-out 0.3s;
+  }
+}
